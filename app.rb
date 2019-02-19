@@ -15,6 +15,10 @@ get '/route' do
   "just added a new route"
 end
 
-get '/cat' do
-  erb(:index)
+get '/named-cat' do
+   p @name = params[:name]
+   p @last_name = params[:last_name]
+   p @age = params[:age]
+  erb:index
+
 end
